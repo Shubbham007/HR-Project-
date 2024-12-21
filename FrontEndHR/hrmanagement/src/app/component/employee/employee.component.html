@@ -1,0 +1,38 @@
+<p class="h1 my-3">Employees</p>
+<hr>
+
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th scope="col">Employee Id</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col"> Salary</th>
+        <th scope="col"> joiningDate</th>
+        <th scope="col"> Email</th>
+        <th scope="col"> Password</th>
+        <th scope="col">Department</th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let employee of employeeService.employees">
+    <td>{{ employee.employeeId}}</td>
+    <td>{{ employee.employeeName}}</td>
+    <td>{{ employee.salary}}</td>
+    <td>{{ employee.joiningDate}}</td>
+    <td>{{ employee.email}}</td>
+    <td>{{ employee.password}}</td>
+    <td>{{ employee.department.departmentId}}</td>
+   
+</tr>
+</tbody>
+</table>
+<div class="d-flex justify-content-center m-2" style="margin-top: 20px;">
+    <button class="btn btn-primary me-2" type="button" [routerLink]="['/update']">
+      Update Employee
+    </button>
+    
+    <button class="btn btn-danger" type="button" [routerLink]="['/delete']">
+      Delete Employee
+    </button>
+  </div>

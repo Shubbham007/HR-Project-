@@ -1,0 +1,15 @@
+package com.hrmanagementsystem.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.hrmanagementsystem.entity.Department;
+
+public interface Departmentrepository extends CrudRepository<Department, Integer> {
+	
+	Integer deleteByDepartmentId(Integer departmentId);
+	Integer saveByDepartmentId(Integer departmentId);
+	Integer searchByDepartmentId(Integer departmentId);
+
+}
+
+

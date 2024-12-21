@@ -1,0 +1,13 @@
+package com.hrmanagementsystem.repository;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.hrmanagementsystem.entity.Employee;
+
+public interface Employeerepository extends CrudRepository<Employee, Integer>{
+
+	Integer deleteByEmployeeId(Integer employeeId);
+	Integer findByEmployeeId(Integer employeeId);
+	Integer searchByEmployeeId(Integer employeeId);
+	
+}

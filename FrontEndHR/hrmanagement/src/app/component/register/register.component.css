@@ -1,0 +1,14 @@
+.formHeading {
+    text-emphasis-color: red;
+    padding-inline-start: 40%;
+    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border: 4px solid hsl(0, 0%, 90%);
+    border-color: rgb(144, 208, 192);
+}
+
+.mainForm {
+    font-family: cursive;
+}
+.formControl
+{}

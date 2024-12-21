@@ -1,0 +1,6 @@
+package com.hrmanagementsystem.entity;
+@Entity
+public class Department {
+	
+String 
+}

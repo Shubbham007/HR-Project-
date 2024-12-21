@@ -1,0 +1,52 @@
+
+    <form #registerForm="ngForm" (ngSubmit)="registerEmployee(employees)">
+    <div class="mainForm border border-secondary rounded px-md-4 p-5 px-md-10" style=" margin: 20px auto; position: relative; margin-top: 30px; margin-left: -20px; border-color: black; border-radius: 3px;">
+        <h3 class="formHeading">Register</h3>
+
+        <div class="mb-3">
+          <label for="employeeName" class="form-label">Employee Name</label>
+          <input required type="text" name="employeeName" #employeeName="ngModel"
+                 [(ngModel)]="employees.employeeName" class="form-control" id="employeeName" placeholder="Employee Name">
+        </div>
+
+        <div class="mb-3">
+          <label for="salary" class="form-label">Salary</label>
+          <input type="number" [defaultValue]="" class="form-control" name="salary" #employeeSalary="ngModel"
+                 [(ngModel)]="employees.salary" placeholder="Salary">
+        </div>
+
+        <div class="mb-3">
+          <label for="joiningDate" class="form-label">joiningDate</label>
+          <input type="date" class="form-control" name="joiningDate" #employeeId="ngModel"
+                 [(ngModel)]="employees.joiningDate" placeholder="eg. 2024-01-01">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" #employeeEmail="ngModel"
+                 [(ngModel)]="employees.email" placeholder="name@example.com">
+        </div>
+    
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" #employeePassword="ngModel"
+                 [(ngModel)]="employees.password" placeholder="eg. Pass@123">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="departmentId" class="form-label">Department Id</label>
+          <select required name="departmentId" #departmentId="ngModel"
+                  [(ngModel)]="employees.department.departmentId" id="departmentId" class="form-control">
+            <option value="" disabled selected>Select Department</option>
+            <option *ngFor="let department of departmentService.departments" [value]="department.departmentId">
+              {{ department.departmentId }}
+            </option>
+          </select>
+        </div>
+       
+          <div>
+            <button type="button" class="btn btn-info px-md-3 " (click)= "null">Submit</button>
+          </div>
+    </div>  
+</form>
